@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Corenya</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <style>
+        html, body {
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 100vh;
+            margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-left {
+            position: fixed;
+            left: 20px;
+            top: 15px;
+            z-index: 999;
+            /*padding: .5em;*/
+            /*background: white;*/
+            background: linear-gradient(0.25turn, #d33, #0c0, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .top-right {
+            position: fixed;
+            right: 20px;
+            top: 18px;
+            z-index: 999;
+            padding: .5em;
+            background: white;
+        }
+
+        .info {
+            right: 130px;
+        }
+
+        .links {
+            border: 1px solid deepskyblue;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 28px;
+        }
+
+        .links > a {
+            color: #636b6f;
+            padding: 0 15px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .gnw-map-service {
+            height: 100vh;
+        }
+
+        .gnw-map.fade {
+            transition: opacity .15s linear;
+        }
+
+        .gnw-map.fade:not(.show) {
+            opacity: 0;
+        }
+
+        .right {
+            position: fixed;
+            right: -280px;
+            top: 0;
+            height: 100%;
+            width: 280px;
+            z-index: 998;
+            padding: 5em .7em 1em;
+            background: #efefefef;
+            box-shadow: -1px 0 5px 1px grey;
+            transition: 0.5s;
+        }
+
+        .right.active {
+            right: 0;
+        }
+
+        .text-success {
+            font-size: 1.5em;
+            color: black;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="full-height py-5 pt-md-0">
+
+    <div class="top-left">
+        <a href="/"><h1>Corenya</h1></a>
+    </div>
+
+            <div class="top-right links">
+                            <a href="https://corenya.herokuapp.com/login">Login</a>
+
+                                    </div>
+    
+    <div class="top-right links info mr-3">
+        <a id="infoBtn" href="#infoPanel" class="btn">Info</a>
+    </div>
+
+    <div id="infoPanel" class="right" style="overflow-y: auto">
+        <h5><b>About this site</b></h5>
+
+        <p>
+            This site was made with 2 purposes in mind.
+        </p>
+
+        <ul>
+            <li>
+                First, to be able to provide an up to date overview of the current status of the country Kenya at a
+                glance with the appropriate visualizations.
+            </li>
+            <br>
+            <li>
+                And two, to enable our fellow countrymen be able to track their own status on the platform. This way one
+                might be able to see the progression of their symptoms and with the correct data, know at what stage
+                they are in for statistical purposes.
+            </li>
+        </ul>
+        <br>
+
+        <span>Info from Wikipedia, WHO, Google...</span>
+
+        <br><br>
+        <p>If you encounter any inaccuracies or would like to give feedback on the project, please do so through <a
+                    href="https://forms.gle/Vg58DWRMt335uC2N9" target="_blank">this link.</a></p>
+        
+
+        
+        
+
+        
+        
+
+        
+
+        
+    </div>
+
+    <div class="container pt-4 pb-5">
+
+        <div class="row mt-3 mt-md-5">
+            <div class="col-md-12">
+                <h6 class="title"> (Last Update: 6 hours ago) </h6>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- Confirmed Card Example -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Confirmed</h5>
+                                <span class="h2 font-weight-bold mb-0" style="color: #f77">179</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                    <i class="ni ni-active-40"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-0 text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>7</span>
+                            <span class="text-nowrap">Confirmed Today</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recovered Card Example -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Recovered</h5>
+                                <span class="h2 font-weight-bold mb-0" style="color: #7f7">4</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                    <i class="ni ni-active-40"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-0 text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>0</span>
+                            <span class="text-nowrap">Recovered Today</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deaths Card Example -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Dead</h5>
+                                <span class="h2 font-weight-bold mb-0">6</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                    <i class="ni ni-active-40"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-0 text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>0</span>
+                            <span class="text-nowrap">Deaths Today</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-default">
+                    <div class="card-header bg-transparent">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase ls-1 mb-1">Overview</h6>
+                                <h5 class="h3 mb-0">Cases By Day</h5>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- Chart -->
+                        <div class="chart">
+                            <!-- Chart wrapper -->
+                            <canvas style="display: none;" id="brgnjvpeyaotqdcxhwilksumf"  height='400' ></canvas>
+<div id="brgnjvpeyaotqdcxhwilksumf_loader" style="
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    align-items: center;
+    height: 400px;
+    
+">
+    <svg width="50" height="50" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
+                <stop stop-color="#22292F" stop-opacity="0" offset="0%"/>
+                <stop stop-color="#22292F" stop-opacity=".631" offset="63.146%"/>
+                <stop stop-color="#22292F" offset="100%"/>
+            </linearGradient>
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+            <g transform="translate(1 1)">
+                <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" stroke-width="2">
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite" />
+                </path>
+                <circle fill="#22292F" cx="36" cy="18" r="1">
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite" />
+                </circle>
+            </g>
+        </g>
+    </svg>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-default">
+                    <div class="card-header bg-transparent">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase ls-1 mb-1">Overview</h6>
+                                <h5 class="h3 mb-0">Cumulative Cases</h5>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- Chart -->
+                        <div class="chart">
+                            <!-- Chart wrapper -->
+                            <canvas style="display: none;" id="ofrqhypmctgindxbvlkaejzus"  height='400' ></canvas>
+<div id="ofrqhypmctgindxbvlkaejzus_loader" style="
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    align-items: center;
+    height: 400px;
+    
+">
+    <svg width="50" height="50" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
+                <stop stop-color="#22292F" stop-opacity="0" offset="0%"/>
+                <stop stop-color="#22292F" stop-opacity=".631" offset="63.146%"/>
+                <stop stop-color="#22292F" offset="100%"/>
+            </linearGradient>
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+            <g transform="translate(1 1)">
+                <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" stroke-width="2">
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite" />
+                </path>
+                <circle fill="#22292F" cx="36" cy="18" r="1">
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite" />
+                </circle>
+            </g>
+        </g>
+    </svg>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://corenya.herokuapp.com/vendor/jquery/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+<script  type="text/javascript">
+    var ctvChart = document.getElementById('brgnjvpeyaotqdcxhwilksumf').getContext('2d');
+    function brgnjvpeyaotqdcxhwilksumf_create(data) {
+        brgnjvpeyaotqdcxhwilksumf_rendered = true;
+        document.getElementById("brgnjvpeyaotqdcxhwilksumf_loader").style.display = 'none';
+        document.getElementById("brgnjvpeyaotqdcxhwilksumf").style.display = 'block';
+        window.brgnjvpeyaotqdcxhwilksumf = new Chart(document.getElementById("brgnjvpeyaotqdcxhwilksumf").getContext("2d"), {
+            type: data[0].type,
+            data: {
+                labels: ["2020-03-13","2020-03-15","2020-03-18","2020-03-22","2020-03-23","2020-03-24","2020-03-25","2020-03-26","2020-03-28","2020-03-29","2020-03-30","2020-03-31","2020-04-01","2020-04-02","2020-04-03","2020-04-04","2020-04-05","2020-04-06","2020-04-07","2020-04-08"],
+                datasets: data
+            },
+            options: {"maintainAspectRatio":false,"scales":{"xAxes":[{"type":"time","time":{"displayFormats":{"week":"ll"},"unit":"day"}}],"yAxes":[{"ticks":{"beginAtZero":true}}]}},
+            plugins: []
+        });
+    }
+    let brgnjvpeyaotqdcxhwilksumf_rendered = false;
+let brgnjvpeyaotqdcxhwilksumf_load = function () {
+    if (document.getElementById("brgnjvpeyaotqdcxhwilksumf") && !brgnjvpeyaotqdcxhwilksumf_rendered) {
+                    brgnjvpeyaotqdcxhwilksumf_create([{"borderWidth":2,"borderColor":"#f77","data":["1","2","4","8","1","9","3","3","7","4","8","9","22","29","12","4","16","16","14","7"],"label":"Confirmations","type":"line"},{"borderWidth":2,"borderColor":"#7f7","data":["0","0","0","0","0","0","1","0","0","0","0","0","2","0","0","1","0","0","0","0"],"label":"Recoveries","type":"line"},{"borderWidth":2,"borderColor":"#777","data":["0","0","0","0","0","0","0","1","0","0","0","0","0","0","1","2","0","2","0","0"],"label":"Deaths","type":"line"}])
+            }
+};
+window.addEventListener("load", brgnjvpeyaotqdcxhwilksumf_load);
+document.addEventListener("turbolinks:load", brgnjvpeyaotqdcxhwilksumf_load);
+
+</script>
+
+<script  type="text/javascript">
+    var ctvChart = document.getElementById('ofrqhypmctgindxbvlkaejzus').getContext('2d');
+    function ofrqhypmctgindxbvlkaejzus_create(data) {
+        ofrqhypmctgindxbvlkaejzus_rendered = true;
+        document.getElementById("ofrqhypmctgindxbvlkaejzus_loader").style.display = 'none';
+        document.getElementById("ofrqhypmctgindxbvlkaejzus").style.display = 'block';
+        window.ofrqhypmctgindxbvlkaejzus = new Chart(document.getElementById("ofrqhypmctgindxbvlkaejzus").getContext("2d"), {
+            type: data[0].type,
+            data: {
+                labels: ["2020-03-13","2020-03-15","2020-03-18","2020-03-22","2020-03-23","2020-03-24","2020-03-25","2020-03-26","2020-03-28","2020-03-29","2020-03-30","2020-03-31","2020-04-01","2020-04-02","2020-04-03","2020-04-04","2020-04-05","2020-04-06","2020-04-07","2020-04-08"],
+                datasets: data
+            },
+            options: {"maintainAspectRatio":false,"scales":{"xAxes":[{"type":"time","time":{"displayFormats":{"week":"ll"},"unit":"day"}}],"yAxes":[{"ticks":{"beginAtZero":true}}]}},
+            plugins: []
+        });
+    }
+    let ofrqhypmctgindxbvlkaejzus_rendered = false;
+let ofrqhypmctgindxbvlkaejzus_load = function () {
+    if (document.getElementById("ofrqhypmctgindxbvlkaejzus") && !ofrqhypmctgindxbvlkaejzus_rendered) {
+                    ofrqhypmctgindxbvlkaejzus_create([{"borderWidth":2,"borderColor":"#f77","data":[1,3,7,15,16,25,28,31,38,42,50,59,81,110,122,126,142,158,172,179],"label":"Confirmations","type":"line"},{"borderWidth":2,"borderColor":"#7f7","data":[0,0,0,0,0,0,1,1,1,1,1,1,3,3,3,4,4,4,4,4],"label":"Recoveries","type":"line"},{"borderWidth":2,"borderColor":"#777","data":[0,0,0,0,0,0,0,1,1,1,1,1,1,1,2,4,4,6,6,6],"label":"Deaths","type":"line"}])
+            }
+};
+window.addEventListener("load", ofrqhypmctgindxbvlkaejzus_load);
+document.addEventListener("turbolinks:load", ofrqhypmctgindxbvlkaejzus_load);
+
+</script>
+
+<script>
+    $("#infoBtn").click(function () {
+        $("#infoPanel").toggleClass("active");
+    });
+</script>
+</body>
+</html>
