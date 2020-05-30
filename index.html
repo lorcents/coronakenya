@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Coronakenya</title>
-
+    <script src="index.js"></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -177,7 +177,7 @@
 
         <div class="row mt-3 mt-md-5">
             <div class="col-md-12">
-                <h6 class="title"> (Last Update: 11  hours ago) </h6>
+                <h6 id="lastUpdated" class="title"> (Last Update: 11  hours ago) </h6>
             </div>
         </div>
 
@@ -190,8 +190,8 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h5 class="card-title text-uppercase text-muted mb-0">Confirmed</h5>
-                                <span class="h2 font-weight-bold mb-0" style="color: #f77">737</span>
+                                <h5  class="card-title text-uppercase text-muted mb-0">Confirmed</h5>
+                                <span id="confirmed" class="h2 font-weight-bold mb-0" style="color: #f77">738</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
@@ -200,7 +200,7 @@
                             </div>
                         </div>
                         <p class="mt-3 mb-0 text-sm">
-                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>4</span>
+                            <span id="confirmedToday" class="text-success mr-2"><i class="fa fa-arrow-up"></i>4</span>
                             <span class="text-nowrap">Confirmed Today</span>
                         </p>
                     </div>
@@ -215,7 +215,7 @@
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Recovered</h5>
-                                <span class="h2 font-weight-bold mb-0" style="color: #7f7">281</span>
+                                <span id="recovered" class="h2 font-weight-bold mb-0" style="color: #7f7">281</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
@@ -224,7 +224,7 @@
                             </div>
                         </div>
                         <p class="mt-3 mb-0 text-sm">
-                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>22</span>
+                            <span  id="recoveredToday"  class="text-success mr-2"><i class="fa fa-arrow-up"></i>22</span>
                             <span class="text-nowrap">Recovered Today</span>
                         </p>
                     </div>
@@ -239,7 +239,7 @@
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Dead</h5>
-                                <span class="h2 font-weight-bold mb-0">40</span>
+                                <span id="deaths"  class="h2 font-weight-bold mb-0">40</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
@@ -248,7 +248,7 @@
                             </div>
                         </div>
                         <p class="mt-3 mb-0 text-sm">
-                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>4</span>
+                            <span id="deathsToday"   class="text-success mr-2"><i class="fa fa-arrow-up"></i>4</span>
                             <span class="text-nowrap">Deaths Today</span>
                         </p>
                     </div>
@@ -480,5 +480,6 @@ document.addEventListener("turbolinks:load", ofrqhypmctgindxbvlkaejzus_load);
         $("#infoPanel").toggleClass("active");
     });
 </script>
+<script src="index.js"></script>
 </body>
 </html>
