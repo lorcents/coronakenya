@@ -10,4 +10,4 @@ document.getElementById("deathsToday").innerHTML="4";
 
 
 var x = document.lastModified;
-document.getElementById("lastUpdated").innerHTML = "last update at " + x;
+document.getElementById("lastUpdated").innerHTML = "(last update at " + x +")";
