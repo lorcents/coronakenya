@@ -1,8 +1,8 @@
 
-document.getElementById("confirmed").innerHTML="1888";
-document.getElementById("confirmedToday").innerHTML="143";
-document.getElementById("recovered").innerHTML="464";
-document.getElementById("recoveredToday").innerHTML="26";
+document.getElementById("confirmed").innerHTML="2021";
+document.getElementById("confirmedToday").innerHTML="59";
+document.getElementById("recovered").innerHTML="474";
+document.getElementById("recoveredToday").innerHTML="14";
 document.getElementById("deaths").innerHTML="63";
 document.getElementById("deathsToday").innerHTML="1";
 
