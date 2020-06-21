@@ -1,10 +1,10 @@
 
 
-document.getElementById("confirmed").innerHTML="4374";
-document.getElementById("confirmedToday").innerHTML="117";
-document.getElementById("recovered").innerHTML="1550";
-document.getElementById("recoveredToday").innerHTML="91";
-document.getElementById("deaths").innerHTML="119";
+document.getElementById("confirmed").innerHTML="4478";
+document.getElementById("confirmedToday").innerHTML="104";
+document.getElementById("recovered").innerHTML="1586";
+document.getElementById("recoveredToday").innerHTML="36";
+document.getElementById("deaths").innerHTML="121";
 document.getElementById("deathsToday").innerHTML="2";
 
 
